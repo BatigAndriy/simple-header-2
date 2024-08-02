@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7199f58f9c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+      <div class="brand">
+        <i class="fa-solid fa-vector-square"></i>
+        <h3>LOGO</h3>
+      </div>
+      <div class="for-burger-button" id='for-burger-button'>
+        <span class="fas fa-bars" id="menuIcon-header_2"></span>
+         <div class="searchBox-header_2" id="nav">
+            <div class="input-group-header_2">
+                <input type="text" placeholder="Search here..." />
+                <span class="fas fa-search" id="searchIcon"></span>
+            </div>
+            <ul>
+              <li>
+                <span class="fas fa-home"></span>
+                <a href="#"> Home </a>
+              </li>
+              <li>
+                <span class="fa fa-user-circle"></span>
+                <a href="#"> Profile </a>
+              </li>
+              <li>
+                <span class="fas fa-question-circle"></span>
+                <a href="#"> Help </a>
+              </li>
+              <li>
+                <span class="fas fa-lock"></span>
+                <a href="#"> Account </a>
+              </li>
+              <li>
+                <span class="fas fa-sign-out"></span>
+                <a href="#"> Signout </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.getElementById('menuIcon-header_2');
+        const nav = document.getElementById('nav');
+        const forBurger  = document.getElementById('for-burger-button');
+
+
+
+        menuIcon.addEventListener('click', () => {
+             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+
+         menuIcon.addEventListener('mouseenter', () => {
+            if (window.innerWidth <= 580)
+                nav.style.display = 'flex';
+        });
+
+        nav.addEventListener('mouseenter', () => {
+            if (window.innerWidth <= 580)
+                nav.style.display = 'flex';
+        });
+
+
+        forBurger.addEventListener('mouseleave', () => {
+            if (window.innerWidth <= 580)
+            nav.style.display = 'none';
+
+        });
+
+
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+/* Обнулення */
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-font-robo: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --body-width: 100%;
+    --n-blocks: 4;
+    --n-cards: 4;
+    --padding-1-rem: 1rem;
+    --margin-1-rem: 1rem;
+    --margin-percen: 1.5%;
+    --padding-percen: 1.5%;
+    --margin-05-rem: 0.5rem;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+html {
+    background: #f9f9f9;
+}
+
+
+body {
+    font-family: var(--bs-font-robo);
+    line-height: 1.5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--body-width);
+    min-width: 220px;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.header {
+  display: flex;
+  width: 100%;
+  background: rgb(8, 9, 19);
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.4em 1em;
+  width: 20%;
+  gap: 0.7em;
+}
+
+
+.brand .fa-github {
+   font-size: clamp(1.2rem, 1.3vw, 1.7rem);
+   padding: 0em 0.5em 0 0;
+}
+
+
+.brand h1 {
+  margin-left: 5%;
+}
+
+
+.for-burger-button {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+#menuIcon-header_2 {display: none;}
+
+.searchBox-header_2 {
+  display: flex;
+  width: 100%;
+  min-width: 8em;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.input-group-header_2 {
+    display: flex;
+    width: 30%;
+    min-width: 10em;
+}
+
+
+.input-group-header_2  input {
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    padding: 0.3em 0;
+    text-indent: 10px;
+    font-size: clamp(0.75rem, 1.01vw, 0.9rem);
+}
+
+
+#searchIcon {
+  position: relative;
+  left: -25px;
+  padding-top: 6px;
+  font-size: clamp(0.7rem, 1.01vw, 0.9rem);
+  color: rgb(77, 77, 77);
+  cursor: pointer;
+  z-index: 221;
+}
+
+
+.searchBox-header_2 ul {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    min-width: 16em;
+}
+
+
+.searchBox-header_2 ul li {
+  display: inline-block;
+  margin-left: 0.3em;
+  transition: all 0.5s ease;
+  text-align: center;
+  cursor: pointer;
+  padding: 1%;
+  height: 20px;
+  overflow: hidden;
+}
+
+
+.searchBox-header_2 ul li:hover {
+  height: 45px;
+  transition: height 0.4s ease;
+}
+
+
+.searchBox-header_2 ul li span {
+  display: block;
+  font-size: clamp(0.75rem, 1.01vw, 0.9rem);
+}
+
+
+.searchBox-header_2 ul li a {
+  text-decoration: none;
+  font-size: clamp(0.75rem, 1.01vw, 0.9rem);
+  color: white;
+}
+
+
+
+.searchBox-header_2 ul li a:active,
+:focus {
+  font-weight: 700;
+}
+
+
+
+
+@media (max-width: 580px) {
+
+.for-burger-button {
+        display: flex;
+        z-index: 2;
+        padding: 0.4em 0;
+        margin-right: 1em;
+        position: relative;
+        width: 2em;
+        }
+
+
+.searchBox-header_2 {
+      top: 100%;
+      right: -1em;
+      width: 100%;
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      background-color: rgb(8, 9, 19);
+      border-radius: 0 0 5px 5px;
+      z-index: 3;
+      min-width: 9.5em;
+    }
+
+
+.input-group-header_2 {
+    width: 100%;
+    padding-top: 1em;
+    min-width: 8em;
+
+}
+
+.input-group-header_2  input {
+    width: 90%;
+    padding: 0.3em 0.2em;
+    margin: 0.4em 0.5em;
+    }
+
+
+#searchIcon {
+   padding-top: 9px;
+}
+
+
+.searchBox-header_2 ul {
+    width: 100%;
+    border-bottom: 5px;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 8rem;
+  }
+
+
+.searchBox-header_2 ul li {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        overflow: visible;
+        height: auto;
+        align-items: center;
+        transition: all 0.5s ease;
+        padding: 0.2em 0.5em;
+        justify-content: flex-start;
+
+    }
+
+
+
+.searchBox-header_2  ul li:hover {
+    background: rgb(35, 36, 51);
+    height: 32px;
+    transition: height 0.6s ease;
+    transition: background 0.6s ease;
+  }
+
+
+.searchBox-header_2  ul li a {
+    padding: 0.2em 1em;
+  }
+
+
+.searchBox-header_2  ul li span {
+    display: inline-block;
+    padding: 0.2em 0;
+  }
+
+
+
+
+
+#menuIcon-header_2 {
+    display: inline;
+    font-size: clamp(0.8rem, 1.01vw, 0.9rem);
+    float: right;
+    padding: 0.7em 0.8em;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgb(221, 221, 221);
+    z-index: 2;
+
+  }
+
+}
